@@ -23,21 +23,23 @@
 # Initial seed for a react project
 
 Steps to run this project
-1. Clone this repo
-> git clone https://github.com/kathesama/starting-seed-react.git
-2. Run install
-> npm install
 
-Then go to *.git/hooks/commit-msg*, find the main function and replace it:
+1. Clone this repo
+   > git clone https://github.com/kathesama/starting-seed-react.git
+2. Run install
+   > npm install
+
+Then go to _.git/hooks/commit-msg_, find the main function and replace it:
+
 > const commitMsgFilePath = process.argv[2];
 
 with:
 
->const commitMsgFilePath = path.resolve(process.env.PWD, process.argv[2].substring(1));
+> const commitMsgFilePath = path.resolve(process.env.PWD, process.argv[2].substring(1));
 
--> This fixes *Error: ENOENT: no such file or directory, open 'X:\.git\COMMIT_EDITMSG'*
+-> This fixes _Error: ENOENT: no such file or directory, open 'X:\.git\COMMIT_EDITMSG'_
 
-**Note**: This project uses *git-commit-msg-linter* package, this one add a nice pattern for work in commit messages<br>
+**Note**: This project uses _git-commit-msg-linter_ package, this one add a nice pattern for work in commit messages<br>
 
 ```
 correct format: <type>[scope]: <subject>
