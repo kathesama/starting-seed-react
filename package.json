@@ -6,24 +6,22 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "immer": ">=9.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
-    "web-vitals": "^1.1.2",
     "set-value": ">=4.0.1",
-    "immer": ">=9.0.6"
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "lint": "eslint src",
+    "prettier:fix": "prettier --write",
+    "prettier:check": "prettier --check"
   },
   "browserslist": {
     "production": [
@@ -36,5 +34,28 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^12.1.2",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.4.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "lint-staged": {
+    "src/*{js,jsx,ts,tsx}": [
+      "npm prettier:fix",
+      "npm lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
   }
 }

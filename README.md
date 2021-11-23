@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[<img src="https://img.shields.io/badge/Linkedin-kathesama-blue?style=for-the-badge&logo=linkedin">](https://www.linkedin.com/in/kathesama)
+<br>
+![IntellijIdea](https://img.shields.io/badge/Made%20for-IntellijIdea-1f425f.svg?style=for-the-badge)
+![ReactJS](https://img.shields.io/badge/-ReactJS-blue?logo=react&logoColor=white&style=for-the-badge)
+<br>
+[![GitHub issues](https://img.shields.io/github/issues/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/issues)
+[![GitHub forks](https://img.shields.io/github/forks/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/network)
+[![GitHub stars](https://img.shields.io/github/stars/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/stargazers)
+<br>
+![GitHub last commit](https://img.shields.io/github/last-commit/kathesama/starting-seed-react?color=red&style=plastic)
+![GitHub version commits](https://img.shields.io/github/commits-since/kathesama/starting-seed-react/V2.0.0.svg?color=yellow&style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/kathesama/starting-seed-react?style=plastic)
+<br>
+![Maintaned](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=plastic)
+![OWASP](https://img.shields.io/badge/OWASP%3F-yes-green.svg?style=plastic)
+![CleanCode](https://img.shields.io/badge/CleanCode%3F-yes-green.svg?style=plastic)
+[![GitHub license](https://img.shields.io/github/license/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/blob/main/LICENSE)
+![GitHub repo size](https://img.shields.io/github/repo-size/kathesama/starting-seed-react?style=plastic)
+<br>
 
-## Available Scripts
+# Initial seed for a react project
 
-In the project directory, you can run:
+Steps to run this project
+1. Clone this repo
+> git clone https://github.com/kathesama/starting-seed-react.git
+2. Run husky init
+> npx husky-init
+3. Config Husky with lint-staged (console excecution)
+> npm i -D lint-staged<br>
+> npm set-script prepare "husky install"<br>
+> npm run prepare<br>
+> npx husky add .husky/pre-commit 'npx lint-staged'
+<br>
 
-### `npm start`
+Then go to *.git/hooks/commit-msg*, find the main function and replace it:
+> const commitMsgFilePath = process.argv[2];
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+with:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+>const commitMsgFilePath = path.resolve(process.env.PWD, process.argv[2].substring(1));
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-> Esto corrige el path para el archivo COMMIT_EDITMSG.
