@@ -69,7 +69,7 @@
         "allowArrayStart": true
       }
     ],
-    "multiline-comment-style": ["error", "bare-block"],
+    "multiline-comment-style": ["warn", "bare-block"],
     "spaced-comment": ["error", "always", { "block": { "balanced": true } }]
   }
 }
