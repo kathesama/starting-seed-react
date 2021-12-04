@@ -25,24 +25,32 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["*.test.js", "*.test.tsx", "*.css"],
+  "ignorePatterns": ["*.test.js", "*.test.tsx", "*.css", "*.svg"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".svg"] }],
+    "max-len": ["error", { "code": 130 }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-no-bind": "off",
+    "react/jsx-one-expression-per-line": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "no-unused-vars": "warn",
     "no-case-declarations": "off",
     "linebreak-style": 0,
     "prettier/prettier": ["error", { "endOfLine": "auto"}, { "usePrettierrc": true }],
-    "react/jsx-one-expression-per-line": "off",
     "comma-dangle": ["error", {
-      "arrays": "never",
+      "arrays": "only-multiline",
       "objects": "only-multiline",
-      "imports": "never",
-      "exports": "never",
+      "imports": "only-multiline",
+      "exports": "only-multiline",
       "functions": "never"
     }],
-    "object-curly-newline": ["warn"],
+    "object-curly-newline": ["warn",
+      {
+        "ObjectExpression": { "consistent": true, "multiline": true, "minProperties": 1 },
+        "ObjectPattern": { "consistent": true, "multiline": true },
+        "ImportDeclaration": { "multiline": true, "minProperties": 6 },
+        "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+      }],
     "jsx-a11y/label-has-associated-control": ["error", {
       "required": {
         "some": ["nesting", "id"]
@@ -69,7 +77,10 @@
         "allowArrayStart": true
       }
     ],
-    "multiline-comment-style": ["warn", "bare-block"],
-    "spaced-comment": ["error", "always", { "block": { "balanced": true } }]
+    "multiline-comment-style": ["error", "bare-block"],
+    "spaced-comment": ["error", "always", { "block": { "balanced": true } }],
+
+    // State
+    "no-param-reassign": ["warn", { "props": true, "ignorePropertyModificationsFor": ["state"] }]
   }
 }
