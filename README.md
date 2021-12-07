@@ -4,6 +4,7 @@
 <br>
 ![IntellijIdea](https://img.shields.io/badge/Made%20for-IntellijIdea-1f425f.svg?style=for-the-badge)
 ![ReactJS](https://img.shields.io/badge/-ReactJS-blue?logo=react&logoColor=white&style=for-the-badge)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 <br>
 [![GitHub issues](https://img.shields.io/github/issues/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/issues)
 [![GitHub forks](https://img.shields.io/github/forks/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/network)
@@ -14,8 +15,10 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/kathesama/starting-seed-react?style=plastic)
 <br>
 ![Maintaned](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=plastic)
-![OWASP](https://img.shields.io/badge/OWASP%3F-yes-green.svg?style=plastic)
-![CleanCode](https://img.shields.io/badge/CleanCode%3F-yes-green.svg?style=plastic)
+
+[comment]: <> (![OWASP]&#40;https://img.shields.io/badge/OWASP%3F-yes-green.svg?style=plastic&#41;)
+
+[comment]: <> (![CleanCode]&#40;https://img.shields.io/badge/CleanCode%3F-yes-green.svg?style=plastic&#41;)
 [![GitHub license](https://img.shields.io/github/license/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/blob/main/LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/kathesama/starting-seed-react?style=plastic)
 <br>
