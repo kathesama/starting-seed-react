@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+import { PersistGate as ReduxProvider } from 'redux-persist/integration/react';
+import persistStore from 'redux-persist/es/persistStore';
+
 import App from './App';
+import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
+
+import './index.css';
+
+// eslint-disable-next-line
+let persistor = persistStore(store);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <ReduxProvider persistor={persistor}>
+        <App />
+      </ReduxProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
