@@ -4,7 +4,10 @@
 <br>
 ![IntellijIdea](https://img.shields.io/badge/Made%20for-IntellijIdea-1f425f.svg?style=for-the-badge)
 ![ReactJS](https://img.shields.io/badge/-ReactJS-blue?logo=react&logoColor=white&style=for-the-badge)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)!
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 <br>
 [![GitHub issues](https://img.shields.io/github/issues/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/issues)
 [![GitHub forks](https://img.shields.io/github/forks/kathesama/starting-seed-react?style=plastic)](https://github.com/kathesama/starting-seed-react/network)
@@ -70,3 +73,11 @@ correct format: <type>[scope]: <subject>
   subject:
     Brief summary of the change in present tense. Not capitalized. No period at the end.
 ```
+
+Build container app and run it in Docker:
+> docker-compose -f ./docker-compose.yml build
+> docker-compose -f ./docker-compose.yml up -d
+
+## Notes
+
+* This project has material UI installed
