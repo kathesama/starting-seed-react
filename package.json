@@ -23,7 +23,7 @@
     "react-hook-form": "^7.22.5",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "redux-persist": "^6.0.0",
     "set-value": ">=4.0.1",
     "web-vitals": "^1.1.2",
